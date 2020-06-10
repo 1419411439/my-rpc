@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.xiezy</groupId>
-    <artifactId>dubbo-netty</artifactId>
+    <artifactId>my-rpc</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>api</module>
-        <module>netty-server</module>
-        <module>netty-client</module>
+        <module>rpc-api</module>
+        <module>rpc-client</module>
+        <module>rpc-server</module>
     </modules>
     <packaging>pom</packaging>
 
