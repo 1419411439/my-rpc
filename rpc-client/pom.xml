@@ -17,10 +17,10 @@
             <artifactId>rpc-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!-- springboot非web包 -->
+        <!-- springboot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- netty -->
         <dependency>
