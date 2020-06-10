@@ -1,0 +1,9 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: mydubbo-client
+
+zookeeper:
+  url: "192.168.88.100:2181"

@@ -1,0 +1,27 @@
+package com.xiezy.config;
+
+import org.apache.curator.RetryPolicy;
+import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.retry.ExponentialBackoffRetry;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ZookeeperFactory {
+
+    @Value("${zookeeper.url}")
+    String zookeeperUrl;
+
+    @Bean(name = "zkClient")
+    public CuratorFramework zkClient() {
+        RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
+        CuratorFramework client = CuratorFrameworkFactory.newClient(zookeeperUrl, retryPolicy);
+        //建立连接
+        client.start();
+
+        return client;
+    }
+
+}
