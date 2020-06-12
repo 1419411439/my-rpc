@@ -11,3 +11,5 @@
  >>* 1.定义了@Remote注解  
  >>* 2.对使用了@Remote注解的类进行统一管理  
  >>* 3.向zookeeper写入服务器地址信息  
+ 
+ Tip:目前没有将rpc-client和rpc-server单独打成jar包然后在其它项目测试，而是直接在rpc-client直接启用一个web服务做测试
